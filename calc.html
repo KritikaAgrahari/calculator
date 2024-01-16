@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing:2px;  
+        }
+
+        body{
+            min-height: 100vh;
+            max-width: 100%;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            background:linear-gradient(45deg,#3a092e,#3a4452 );
+        }
+
+        .calculator{
+            padding:15px;
+            box-shadow:0 0 20px #000;
+            border:2px solid rgb(116,114,114);
+            border-radius:35px;
+        }
+
+        .display input{
+            width:360px;
+            border:none;
+            outline:none;
+            padding:20px;
+            margin:10px;
+            background:transparent;
+            color:#05031e;
+            font-size:40px;
+            text-align:right;
+            cursor:pointer;
+        }
+
+        input::placeholder{
+            color:#fff;
+        }
+
+        button{
+            width:80px;
+            height:70px;
+            margin:8px;
+            background:transparent;
+            color:#8c7dd8;
+            font-size: 25px;
+            font-weight:700;
+            border:0;
+            border-radius:15%;
+            box-shadow:-5px -6px 15px #000;
+            outline:1px solid rgb(11, 2, 20);
+            outline-offset:2px;
+            cursor:pointer;
+        }
+
+        button:active{
+            background:rgb(63, 6, 73);
+            transform:translate(5px,5px);
+        }
+
+     .opr{
+        color:#03000a;
+        background:rgba(20, 1, 28, 0.418);
+        font-weight:800px;
+     }
+
+     #eqBtn{
+        background:#1a0114;
+        font-weight:900px;
+     }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+        <input type="text" id="inputBox" value="0" placeholder="0" disabled></div>
+        <div class="row">
+          <button type="button" class="opr" >AC </button> 
+          <button type="button" class="opr">DEL </button> 
+          <button type="button" class="opr">% </button> 
+          <button type="button" class="opr">/ </button>
+        </div>
+        <div class="row">
+            <button type="button">7</button> 
+            <button type="button">8 </button> 
+            <button type="button">9 </button> 
+            <button type="button"class="opr"> * </button>
+          </div>
+          <div class="row">
+            <button type="button">4</button> 
+            <button type="button">5 </button> 
+            <button type="button">6 </button> 
+            <button type="button" class="opr"> + </button>
+          </div>
+          <div class="row">
+            <button type="button">1</button> 
+            <button type="button">2 </button> 
+            <button type="button">3</button> 
+            <button type="button" class="opr"> - </button>
+          </div>
+          <div class="row">
+            <button type="button" id="plusMinus">&#xB1</button> 
+            <button type="button"> 0 </button> 
+            <button type="button"> . </button> 
+            <button type="button" id="eqBtn"> = </button>
+          </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
